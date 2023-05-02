@@ -42,7 +42,7 @@ const router=createBrowserRouter([
             {
                 path:':id',
                 element:<News></News>,
-                loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+                loader:({params})=>fetch(`https://dragon-news-app-saimun5656.vercel.app/category/${params.id}`)
             }
         ]
     },
@@ -53,7 +53,7 @@ const router=createBrowserRouter([
             {
                 path:':id',
                 element:<PrivateRoute><NewsDeatils></NewsDeatils></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/news/${params.id}`)
+                loader:({params})=>fetch(`https://dragon-news-app-saimun5656.vercel.app/news/${params.id}`)
             }
         ]
     }
