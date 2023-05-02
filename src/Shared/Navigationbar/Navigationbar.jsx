@@ -24,7 +24,7 @@ const Navigationbar = () => {
                          </p>
                          <img style={{width:'50px',
                                       height:'50px',
-                                      borderRadius:'50%'}} src={user?user.photoURL:''} alt="" />
+                                      borderRadius:'50%'}} src={user?user.photoURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJwsS4T3H_KT8Iy9ub5O9Z9A83UqIWnOJccgtuYFDs3-wHDuUULURKikn7U3zW_1uV77s&usqp=CAU'} alt="" />
 
                          {
                             user?<button onClick={logOut}>logOut</button>:<Link className='bg-secondary px-4 py-1 my-0 text-white rounded' to='/login'>Login</Link>
