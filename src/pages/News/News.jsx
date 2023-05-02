@@ -1,12 +1,20 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLoaderData, useLocation, useParams } from 'react-router-dom';
+import NewsCard from '../../Components/NewsCard/NewsCard';
 
 const News = () => {
-    const location=useLocation()
-    const id=location.pathname.split('/')
+    const {id}=useParams()
+    const newses=useLoaderData();
+    
     return (
         <div>
-            <h1>News {id[1]} {id[2]}</h1>
+            {
+                id?<h1>Total news :{newses.length}</h1>:<></>
+            }
+            
+            {
+                newses.map(ns=><NewsCard key={ns._id} news={ns}></NewsCard>)
+            }
         </div>
     );
 };

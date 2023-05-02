@@ -16,7 +16,7 @@ const LeftNav = () => {
            <div>
            {
             categories?categories.map(ct=><p key={ct.id} >
-                <Activelink  to={`/categories/=${ct.id}`} >{ct.name}</Activelink>
+                <Activelink  to={`/category/${ct.id}`} >{ct.name}</Activelink>
             </p>):''
            }
            </div>
